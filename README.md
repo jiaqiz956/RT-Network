@@ -1,6 +1,6 @@
 # RT-Network
 Social Network Analysis
 
-Retweet network
+Retweet network visualization
 
-Python networkx
+Python package: networkx
