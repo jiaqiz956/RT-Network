@@ -1,2 +1,6 @@
 # RT-Network
-Social Network Analysis_Retweet_networkx
+Social Network Analysis
+
+Retweet network
+
+Python networkx
