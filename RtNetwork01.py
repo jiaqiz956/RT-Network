@@ -16,6 +16,7 @@ with open('data.csv', 'r') as f:
         time = int(day + hm)
 
         rt_time.append(time)
+        
  #计算转发时间的先后顺序
 array = numpy.array(rt_time)
 order = array.argsort()
@@ -26,6 +27,7 @@ with open('data.csv', 'r') as f:
         uid, rtuid= line.strip().split(',')[:-1]
         G.add_edge(uid, rtuid, time = ranks[position])
 edges,colors = zip(*nx.get_edge_attributes(G,'time').items())
+
 #degree=G.degree()#计算节点的出度
 #degree=G.degree()#计算节点的出度
 degree = G.degree(G)
@@ -44,5 +46,5 @@ nx.draw(G, pos, nodelist = degree.keys(),
         node_shape = 'o', cmap=plt.cm.gray,
         edgelist = edges, edge_color = 'gray', width = 0.5,
         with_labels = False, arrows = False)
-plt.title("A sina weibo social network")
+plt.title("A social network")
 plt.show()
